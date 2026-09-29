@@ -77,6 +77,9 @@ a:hover {
   height: auto;
   display: block;
 }
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
 @keyframes reveal {
   to { clip-path: inset(0 0 0 0); }
 }
