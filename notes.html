@@ -13,29 +13,44 @@
 <nav class="site-nav">
   <a href="index.html">About</a>
   <a href="projects.html">Projects</a>
-  <a href="resume.html">Resume</a>
+  <a href="files/Grace_Wou_Resume.pdf" target="_blank">Resume</a>
   <a href="notes.html">Notes</a>
 </nav>
 
-<section class="page-section">
+<div class="fade-content">
 
-  <h2 class="page-title">Things I find interesting</h2>
+  <section class="page-section">
+    <h2 class="page-title">Things I find interesting</h2>
 
-  <div class="note-entry">
-    <h4>Note Title</h4>
-    <p class="note-date">Sep 2026</p>
-    <p>I felt good today.</p>
-  </div>
+    <div class="note-entry">
+      <h4>Note Title</h4>
+      <p class="note-date">Sep 2026</p>
+      <p>Write your note here.</p>
+    </div>
+  </section>
 
-</section>
+  <footer>
+    <div class="social-links">
+      <a href="mailto:gwou@umich.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/gwou/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <p>© 2026 Grace Wou</p>
+  </footer>
 
-<footer>
-  <div class="social-links">
-    <a href="mailto:gwou@umich.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/gwou/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-  </div>
-  <p>© 2026 Grace Wou</p>
-</footer>
+</div>
+
+<script>
+  document.querySelectorAll('nav a, .project-row').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href && !href.startsWith('http') && !href.startsWith('mailto') && !href.endsWith('.pdf') && this.target !== '_blank') {
+        e.preventDefault();
+        document.querySelector('.fade-content').classList.add('fade-out');
+        setTimeout(() => { window.location.href = href; }, 600);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
