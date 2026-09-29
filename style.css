@@ -1,77 +1,173 @@
+:root {
+  --bg: #274d6f;
+  --text: #ffffff;
+  --text-dim: #c3d2de;
+  --accent: #ffffff;
+}
+
 body, html {
-  font-family: "Inconsolata", sans-serif;
-  background-color: #274d6f;
-  color: #ffffff;
   margin: 0;
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-.intro {
-  padding: 80px 20px 20px;
+a {
+  color: var(--text);
 }
 
-/* Typewriter effect: "Hi there! I'm" is 13 characters */
+a:hover {
+  opacity: 0.8;
+}
+
+/* ---------- Hero layout (index.html) ---------- */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: 100vh;
+  padding: 60px 80px;
+  box-sizing: border-box;
+}
+
+.hero-left {
+  max-width: 600px;
+}
+
+.hero-greeting {
+  font-size: 2rem;
+  margin: 0 0 8px 0;
+}
+
+/* "Hi there! I'm" typewriter line */
 .typewriter {
   font-family: "Inconsolata", monospace;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid black;
+  border-right: 3px solid var(--text);
   width: 0;
   margin: 0;
+  font-size: 2rem;
   animation:
-    typing 2s steps(13) forwards,
+    typing 2s steps(14) forwards,
     blink 0.75s step-end infinite;
 }
 
 @keyframes typing {
-  to { width: 13ch; }
+  to { width: 14ch; }
 }
 
 @keyframes blink {
   50% { border-color: transparent; }
 }
 
-.handwriting svg {
-  width: 500px;
-  max-width: 90%;
-  height: auto;
+/* Handwritten name image */
+.hero-name {
+  margin: 8px 0 24px 0;
+  clip-path: inset(0 100% 0 0);
+  animation: reveal 2.5s ease-in-out 2.2s forwards;
 }
 
-.handwriting svg path {
-  fill: none;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: draw 2s ease forwards;
-}
-
-@keyframes draw {
-  to { stroke-dashoffset: 0; }
-}
-
-.social-links a {
-  color: black;
-  font-size: 28px;
-  margin: 0 12px;
-}
-
-.resume-section {
-  padding-top: 80px;
-}
-
-.resume-frame {
+.hero-name img {
   width: 100%;
-  height: 90vh;
-  border: 1px solid #ccc;
+  max-width: 500px;
+  height: auto;
+  display: block;
+}
+
+@keyframes reveal {
+  to { clip-path: inset(0 0 0 0); }
+}
+
+.hero-subtitle {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Inline nav links, matching the reference style */
+.hero-nav {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.hero-nav a {
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.hero-nav a:hover {
+  text-decoration: underline;
+}
+
+.hero-message {
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-project-card {
+  text-align: center;
+  text-decoration: none;
+}
+
+.hero-project-card img {
+  width: 280px;
+  height: auto;
+  display: block;
+}
+
+.hero-project-card p {
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+
+/* ---------- Shared nav bar (all other pages) ---------- */
+
+.site-nav {
+  display: flex;
+  gap: 32px;
+  padding: 24px 80px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
 }
 
 .page-section {
-  padding-top: 80px;
+  padding: 20px 80px 60px;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.page-heading {
-  font-family: "Inconsolata", monospace;
-  font-weight: 700;
-  margin-bottom: 32px;
-}
+
+/* ---------- Projects list ---------- */
+
 .project-row {
   display: flex;
   align-items: flex-start;
@@ -93,20 +189,52 @@ body, html {
 
 .project-text h4 {
   margin: 0 0 8px 0;
+  color: var(--text);
+}
+
+.project-text p {
+  color: var(--text-dim);
 }
 
 .project-divider {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid rgba(255,255,255,0.2);
   margin: 0;
 }
 
-@media (max-width: 600px) {
-  .project-row {
+/* ---------- Resume page ---------- */
+
+.resume-frame {
+  width: 100%;
+  height: 90vh;
+  border: none;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-dim);
+}
+
+.social-links a {
+  color: var(--text);
+  font-size: 24px;
+  margin: 0 12px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding: 40px 24px;
     flex-direction: column;
+    text-align: center;
   }
-  .project-image {
-    flex: 0 0 auto;
-    width: 100%;
+  .hero-nav {
+    justify-content: center;
+  }
+  .site-nav, .page-section {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
