@@ -74,6 +74,10 @@ a:hover {
     hide-cursor 0.1s linear 1.5s forwards;
 }
 
+.typewriter {
+  margin: 60px 0 8px 0;  /* was 0 0 8px 0 */
+}
+
 @keyframes typing {
   to { width: 10ch; }
 }
@@ -97,7 +101,7 @@ a:hover {
 
 .hero-name svg {
   width: 100%;
-  max-width: 320px;
+  max-width: 420px;  /* was 320px */
   height: auto;
   display: block;
 }
