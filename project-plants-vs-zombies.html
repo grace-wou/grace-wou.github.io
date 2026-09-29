@@ -13,30 +13,42 @@
 <nav class="site-nav">
   <a href="index.html">About</a>
   <a href="projects.html">Projects</a>
-  <a href="resume.html">Resume</a>
+  <a href="files/Grace_Wou_Resume.pdf" target="_blank">Resume</a>
   <a href="notes.html">Notes</a>
 </nav>
 
-<section class="page-section">
+<div class="fade-content">
 
-  <p><a href="projects.html">&larr; Back to Projects</a></p>
+  <section class="page-section">
+    <p><a href="projects.html">&larr; Back to Projects</a></p>
+    <h2>Robotic Machine Player</h2>
+    <p class="note-date">Month Year</p>
+    <img src="images/plants-vs-zombies.jpg" alt="Plants vs. Zombies" style="width:100%; margin:16px 0;">
+    <p>Write the full write-up here: what the project is, the problem it solves, the tools and skills involved, and what you learned building it.</p>
+  </section>
 
-  <h2>Plants vs. Zombies</h2>
-  <p class="hero-subtitle">Month Year</p>
+  <footer>
+    <div class="social-links">
+      <a href="mailto:gwou@umich.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/gwou/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <p>© 2026 Grace Wou</p>
+  </footer>
 
-  <img src="images/robotic-machine-player.jpg" alt="Plants vs. Zombies" style="width:100%; margin:16px 0;">
+</div>
 
-  <p>Write the full write-up here: what the project is, the problem it solves, the tools and skills involved, and what you learned building it.</p>
-
-</section>
-
-<footer>
-  <div class="social-links">
-    <a href="mailto:gwou@umich.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/gwou/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-  </div>
-  <p>© 2026 Grace Wou</p>
-</footer>
+<script>
+  document.querySelectorAll('nav a, .project-row').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href && !href.startsWith('http') && !href.startsWith('mailto') && !href.endsWith('.pdf') && this.target !== '_blank') {
+        e.preventDefault();
+        document.querySelector('.fade-content').classList.add('fade-out');
+        setTimeout(() => { window.location.href = href; }, 600);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
