@@ -51,11 +51,11 @@ a:hover {
   white-space: nowrap;
   border-right: 3px solid var(--text);
   width: 0;
-  margin: 0;
-  font-size: 2rem;
+  margin: 0 0 8px 0;
   animation:
-    typing 2s steps(10) forwards,
-    blink 0.75s step-end infinite;
+    typing 1.5s steps(10) forwards,
+    blink 0.75s step-end 3,
+    hide-cursor 0.1s linear 1.5s forwards;
 }
 
 @keyframes typing {
@@ -68,6 +68,10 @@ a:hover {
 
 @keyframes blink {
   50% { border-color: transparent; }
+}
+
+@keyframes hide-cursor {
+  to { border-right-color: transparent; }
 }
 
 /* Handwritten name image */
