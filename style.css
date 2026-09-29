@@ -46,7 +46,7 @@ a:hover {
   justify-content: space-between;
   gap: 40px;
   min-height: 100vh;
-  padding: 60px 80px;
+   padding: 20px 80px;
   box-sizing: border-box;
 }
 
@@ -75,7 +75,7 @@ a:hover {
 }
 
 .typewriter {
-  margin: 140px 0 8px 0;  /* was 0 0 8px 0 */
+  margin: 80px 0 8px 0;  /* was 0 0 8px 0 */
 }
 
 @keyframes typing {
@@ -115,8 +115,8 @@ a:hover {
 .hero-subtitle {
   color: var(--text-dim);
   font-size: 1.1rem;
-  line-height: 1.7;
-  margin: 0 0 32px;  /* removed the top margin that was pushing it down */
+  line-height: 1.6;
+  margin: 0 0 24px;  /* removed the top margin that was pushing it down */
 }
 
 /* Inline nav links, matching the reference style */
@@ -242,13 +242,13 @@ a:hover {
 
 footer {
   text-align: center;
-  padding: 40px;
+  padding: 16px;
   color: var(--text-dim);
 }
 
 .social-links a {
   color: var(--text);
-  font-size: 24px;
+  font-size: 22px;
   margin: 0 12px;
 }
 
