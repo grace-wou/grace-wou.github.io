@@ -1,5 +1,8 @@
 body, html {
   font-family: "Inconsolata", sans-serif;
+  background-color: #274d6f;
+  color: #ffffff;
+  margin: 0;
 }
 
 .intro {
