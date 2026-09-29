@@ -5,50 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Grace Wou</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-  const paths = document.querySelectorAll('#signature path');
-  paths.forEach((path, i) => {
-    const length = path.getTotalLength();
-    path.style.strokeDasharray = length;
-    path.style.strokeDashoffset = length;
-    path.style.animation = `draw 1.5s ease forwards`;
-    path.style.animationDelay = (1.5 + i * 0.4) + 's';
-  });
-</script>
 <body>
 
-<div class="hero">
+<section class="page-section">
 
-  <div class="hero-left">
-    <h1 class="hero-greeting">hello! i'm</h1>
-    <div class="hero-name" id="signature">
-  <img src="images/handwriting_.svg" alt="Grace Wou">
-</div>
+  <h1 class="typewriter" id="typewriter">Hello! I'm</h1>
 
-    <p class="hero-subtitle">
-      I'm a Mechanical Engineering student @ the University of Michigan<br>
-      with a passion for robotics &amp; hands-on design.<br>
-      I'm driven by curiosity: building things, taking them apart,<br>
-      and discovering how the world works.
-    </p>
-
-    <nav class="hero-nav">
-      <a href="index.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="resume.html">Resume</a>
-      <a href="notes.html">Notes</a>
-    </nav>
-
-    <p class="hero-message">&gt; Leave me a message&hellip;</p>
+  <div class="hero-name" id="signature">
+    <!-- Paste your handwriting SVG code here, replacing this comment -->
   </div>
 
-  <div class="hero-right">
-    <img class="hero-photo" src="images/profile.jpg" alt="Grace Wou">
-  </div>
+  <p class="hero-subtitle">
+    I'm a Mechanical Engineering student @ the University of Michigan<br>
+    with a passion for robotics &amp; hands-on design.<br>
+    I'm driven by curiosity: building things, taking them apart,<br>
+    and discovering how the world works.
+  </p>
 
-</div>
+  <nav class="hero-nav">
+    <a href="index.html">about</a>
+    <a href="projects.html">projects</a>
+    <a href="resume.html">resume</a>
+    <a href="notes.html">notes</a>
+  </nav>
+
+</section>
 
 <footer>
   <div class="social-links">
@@ -57,6 +41,19 @@
   </div>
   <p>© 2026 Grace Wou</p>
 </footer>
+
+<script>
+  window.addEventListener('load', () => {
+    const paths = document.querySelectorAll('#signature path');
+    paths.forEach((path, i) => {
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+      path.style.animation = `draw 1.2s ease forwards`;
+      path.style.animationDelay = (1.5 + i * 0.35) + 's';
+    });
+  });
+</script>
 
 </body>
 </html>
