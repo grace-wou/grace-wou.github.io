@@ -69,8 +69,6 @@ a:hover {
 /* Handwritten name image */
 .hero-name {
   margin: 8px 0 24px 0;
-  clip-path: inset(0 100% 0 0);
-  animation: reveal 2.5s ease-in-out 2.2s forwards;
 }
 
 .hero-name img {
@@ -79,7 +77,6 @@ a:hover {
   height: auto;
   display: block;
 }
-
 @keyframes reveal {
   to { clip-path: inset(0 0 0 0); }
 }
