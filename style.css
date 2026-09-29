@@ -54,8 +54,12 @@ a:hover {
   margin: 0;
   font-size: 2rem;
   animation:
-    typing 2s steps(14) forwards,
+    typing 2s steps(10) forwards,
     blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  to { width: 10ch; }
 }
 
 @keyframes typing {
