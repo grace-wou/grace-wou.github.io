@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Breaded Guitar Pedal | Grace Wou</title>
+  <title>Plants vs. Zombies | Grace Wou</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -13,30 +13,42 @@
 <nav class="site-nav">
   <a href="index.html">About</a>
   <a href="projects.html">Projects</a>
-  <a href="resume.html">Resume</a>
+  <a href="files/Grace_Wou_Resume.pdf" target="_blank">Resume</a>
   <a href="notes.html">Notes</a>
 </nav>
 
-<section class="page-section">
+<div class="fade-content">
 
-  <p><a href="projects.html">&larr; Back to Projects</a></p>
+  <section class="page-section">
+    <p><a href="projects.html">&larr; Back to Projects</a></p>
+    <h2>Breaded Guitar Pedal</h2>
+    <p class="note-date">Month Year</p>
+    <img src="images/guitar-pedal.jpg" alt="Breaded Guitar Pedal" style="width:100%; margin:16px 0;">
+    <p>Write the full write-up here: what the project is, the problem it solves, the tools and skills involved, and what you learned building it.</p>
+  </section>
 
-  <h2>Breaded Guitar Pedal</h2>
-  <p class="hero-subtitle">Month Year</p>
+  <footer>
+    <div class="social-links">
+      <a href="mailto:gwou@umich.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/gwou/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <p>© 2026 Grace Wou</p>
+  </footer>
 
-  <img src="images/robotic-machine-player.jpg" alt="Breaded Guitar Pedal" style="width:100%; margin:16px 0;">
+</div>
 
-  <p>Write the full write-up here: what the project is, the problem it solves, the tools and skills involved, and what you learned building it.</p>
-
-</section>
-
-<footer>
-  <div class="social-links">
-    <a href="mailto:gwou@umich.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/gwou/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-  </div>
-  <p>© 2026 Grace Wou</p>
-</footer>
+<script>
+  document.querySelectorAll('nav a, .project-row').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href && !href.startsWith('http') && !href.startsWith('mailto') && !href.endsWith('.pdf') && this.target !== '_blank') {
+        e.preventDefault();
+        document.querySelector('.fade-content').classList.add('fade-out');
+        setTimeout(() => { window.location.href = href; }, 600);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
