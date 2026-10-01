@@ -59,6 +59,21 @@ a:hover {
   margin: 0 0 8px 0;
 }
 
+.hero-nav {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.hero-nav a {
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.hero-nav a:hover {
+  text-decoration: underline;
+}
 /* "Hi there! I'm" typewriter line */
 .typewriter {
   font-family: "Inconsolata", monospace;
