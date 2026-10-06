@@ -287,3 +287,14 @@ footer {
 @view-transition {
   navigation: auto;
 }
+
+/* Skip intro animations on return visits */
+.skip-intro body {
+  animation: none;
+}
+
+.skip-intro .typewriter {
+  animation: none;
+  width: 14ch;
+  border-right-color: transparent;
+}
