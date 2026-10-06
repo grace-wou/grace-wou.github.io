@@ -143,6 +143,20 @@ body.fade-out {
   gap: 16px;
 }
 
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  max-width: 1100px;
+  min-height: 80vh;
+}
+
+.home-left {
+  flex: 1;
+  min-width: 0;
+}
+
 .hero-photo {
   width: 300px;
   height: 300px;               /* must equal width for a true circle */
