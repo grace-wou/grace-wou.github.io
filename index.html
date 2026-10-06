@@ -66,32 +66,38 @@
 
 <script>
   // Draw the handwritten signature, left to right, after the typewriter finishes
-  window.addEventListener('load', () => {
-    const svgEl = document.querySelector('#signature svg');
-    const allPaths = Array.from(svgEl.querySelectorAll('path'));
-    const underline = svgEl.querySelector('#svg_46');
-    const letterPaths = allPaths.filter(p => p.id !== 'svg_46');
+ window.addEventListener('load', () => {
+  // Return visit: leave everything fully drawn, no animation
+  if (sessionStorage.getItem('introPlayed')) return;
 
-    letterPaths.sort((a, b) => a.getBBox().x - b.getBBox().x);
+  const svgEl = document.querySelector('#signature svg');
+  const allPaths = Array.from(svgEl.querySelectorAll('path'));
+  const underline = svgEl.querySelector('#svg_46');
+  const letterPaths = allPaths.filter(p => p.id !== 'svg_46');
 
-    let delay = 1.5;
-    letterPaths.forEach(path => {
-      const length = path.getTotalLength();
-      path.style.strokeDasharray = length;
-      path.style.strokeDashoffset = length;
-      path.style.animation = `draw 0.5s ease forwards`;
-      path.style.animationDelay = `${delay}s`;
-      delay += 0.25;
-    });
+  letterPaths.sort((a, b) => a.getBBox().x - b.getBBox().x);
 
-    if (underline) {
-      const length = underline.getTotalLength();
-      underline.style.strokeDasharray = length;
-      underline.style.strokeDashoffset = length;
-      underline.style.animation = `draw 0.8s ease forwards`;
-      underline.style.animationDelay = `${delay + 0.2}s`;
-    }
+  let delay = 1.5;
+  letterPaths.forEach(path => {
+    const length = path.getTotalLength();
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+    path.style.animation = `draw 0.5s ease forwards`;
+    path.style.animationDelay = `${delay}s`;
+    delay += 0.25;
   });
+
+  if (underline) {
+    const length = underline.getTotalLength();
+    underline.style.strokeDasharray = length;
+    underline.style.strokeDashoffset = length;
+    underline.style.animation = `draw 0.8s ease forwards`;
+    underline.style.animationDelay = `${delay + 0.2}s`;
+  }
+
+  // Mark the intro as played
+  sessionStorage.setItem('introPlayed', 'true');
+});
 
   // Page transitions (nav excluded from fade)
   document.querySelectorAll('nav a, .project-row').forEach(link => {
