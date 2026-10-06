@@ -85,7 +85,7 @@ a:hover {
   margin: 0 0 8px 0;
   animation:
     typing 1.5s steps(10) forwards,
-    blink 0.75s step-end 2,
+    blink 0.75s step-end 1.75,
     hide-cursor 0.1s linear 1.5s forwards;
 }
 
@@ -269,7 +269,7 @@ footer {
 
 @media (max-width: 800px) {
   .hero {
-    padding: 40px 24px;
+    padding: 40px 14px;
     flex-direction: column;
     text-align: center;
   }
