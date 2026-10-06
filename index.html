@@ -8,57 +8,60 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script>
-  const navType = performance.getEntriesByType('navigation')[0]?.type;
-  if (navType === 'reload') {
-    sessionStorage.removeItem('introPlayed');
-  }
-  if (sessionStorage.getItem('introPlayed')) {
-    document.documentElement.classList.add('skip-intro');
-  }
-</script>
+    const navType = performance.getEntriesByType('navigation')[0]?.type;
+    if (navType === 'reload') {
+      sessionStorage.removeItem('introPlayed');
+    }
+    if (sessionStorage.getItem('introPlayed')) {
+      document.documentElement.classList.add('skip-intro');
+    }
+  </script>
   <link rel="icon" type="image/png" href="icon.png">
 </head>
 <body>
 
 <div class="fade-content">
 
-  <section class="page-section">
+  <section class="page-section home-section">
 
-    <h1 class="typewriter" id="typewriter">Hello! I'm</h1>
+    <div class="home-left">
 
-<div class="hero-name" id="signature">
-  <svg width="650" height="310" viewBox="40 30 650 310" xmlns="http://www.w3.org/2000/svg">
-    <g>
-      <path stroke-width="5" d="m381,56c0,1 0,2 0,5c0,4 0,8 0,13c0,6 0,12 0,18c0,6 -0.59122,13.0292 0,19c0.50244,5.0742 1.75531,10.132 4,14c1.80972,3.11848 3.85272,5.1731 5,6c1.814,1.30745 4.07611,1.38268 5,1c2.61313,-1.08239 3.19028,-3.88152 5,-7c2.24469,-3.868 3.49347,-6.87856 4,-10c0.32037,-1.97417 1,-4 1,-6c0,-2 0,-4 0,-6c0,-1 0,-2 0,-3c0,0 -0.68927,2.08025 0,5c1.0275,4.3525 4.11215,7.9183 7,12c2.08246,2.94335 5,5 8,6c3,1 7.21167,1.28588 10,-1c3.28101,-2.68979 5.47546,-7.86194 7,-14c1.46625,-5.9034 2.49622,-12.01761 2,-19c-0.50125,-7.05328 -2.35724,-15.25406 -5,-21c-2.43649,-5.2975 -4.75531,-10.132 -7,-14c-1.80972,-3.11848 -3,-4 -3,-5l-1,0" id="svg_15" stroke="#ffffff" fill="none"/>
-      <path stroke-width="5" d="m471,85c0,0 -1,0 -1,0c-1,0 -1.07611,-0.38268 -2,0c-1.30655,0.5412 -2.32144,3.80901 -4,7c-2.50705,4.76599 -4.44839,9.80565 -6,14c-1.43048,3.867 -2.49347,7.87856 -3,11c-0.32037,1.97417 -0.32037,4.02583 0,6c0.50653,3.12144 1.69254,5.186 3,7c0.8269,1.14727 2.69345,2.4588 4,3c1.84775,0.76537 2.85272,0.8269 4,0c1.814,-1.30745 5.44839,-3.80565 7,-8c1.43048,-3.867 3.84723,-9.04132 5,-13c0.88412,-3.03616 2,-6 2,-10c0,-2 0,-5 0,-8c0,-3 0,-5 -1,-7c-1,-2 -1,-3 -2,-3c0,0 0,0 -1,0l-1,-1l0,0l0,0" id="svg_27" stroke="#ffffff" fill="none"/>
-      <path stroke-width="5" d="m507,96c-1,0 -1,0 -1,1c0,1 0,3 0,4c0,2 0,3 0,5c0,3 0,6 0,9c0,3 0.48627,5.82375 1,8c0.22974,0.97325 0.29291,2.29289 1,3c0.70709,0.70711 2,0 3,0c1,0 3,-1 5,-3c2,-2 3.87769,-5.066 5,-7c1.80969,-3.11848 4.44843,-6.80565 6,-11c1.43048,-3.867 2.14429,-6.93414 3,-9c1.21014,-2.92156 1,-4 1,-5c0,-1 0,-1 0,1c0,4 -1.50732,9.02433 -2,14c-0.50244,5.0742 -1,10 -1,14c0,3 0,5 0,7l0,1l0,0" id="svg_28" stroke="#ffffff" fill="none"/>
-      <polyline stroke-linecap="round" id="svg_29" points="834,144 834,144 " stroke="#000" fill="none"/>
-      <path stroke-width="5" d="m107,64c0,0 0.38268,-0.07612 0,-1c-0.5412,-1.30656 -1.85273,-2.1731 -3,-3c-1.814,-1.30745 -3.186,-1.69255 -5,-3c-1.14727,-0.8269 -1.82375,-1.48626 -4,-2c-1.9465,-0.45951 -3,0 -5,0c-2,0 -4.186,0.69255 -6,2c-1.14727,0.8269 -3,3 -5,5c-2,2 -2.87766,5.066 -4,7c-1.80972,3.11848 -3.44841,6.80565 -5,11c-1.4305,3.867 -2.54863,6.76993 -4,11c-1.65482,4.82303 -1.49755,9.9258 -2,15c-0.39415,3.98053 -0.48055,9.03873 0,12c0.50654,3.12144 1.61065,7.15928 3,10c1.5841,3.23892 4,6 6,8c2,2 3.87856,2.49346 7,3c1.97417,0.32037 5.08025,0.68926 8,0c2.17625,-0.51374 5.37202,-2.38509 9,-5c3.44181,-2.48071 5.45049,-6.45049 8,-9c2.54951,-2.54951 4,-5 5,-7c1,-2 2,-4 2,-6c0,-2 0,-4 -1,-5c-1,-1 -1.85273,-2.1731 -3,-3c-1.814,-1.30745 -4.15224,-1.23463 -6,-2c-1.30656,-0.5412 -2.15224,-0.23463 -4,-1c-1.30656,-0.5412 -2,-1 -2,-1c0,0 1,0 3,0c2,0 3,0 5,-1c2,-1 4.07612,-1.61732 5,-2c1.30656,-0.5412 2.186,-1.69255 4,-3c1.14727,-0.8269 3,-2 4,-3l1,0l0,-1l1,0" id="svg_32" stroke="#ffffff" fill="none"/>
-      <path stroke-width="5" d="m144,96c0,0 0,0 0,1c0,1 0,2 0,4c0,3 0.36655,6.02248 0,9c-0.50378,4.09222 -1,6 -1,9c0,3 -0.48626,5.82375 -1,8c-0.68926,2.91975 0,4 0,5c0,0 0,1 0,1c0,0 0,0 0,1c0,0 0,0 0,0c0,-1 0.48626,-2.82375 1,-5c0.68926,-2.91975 0.61065,-6.15928 2,-9c1.58411,-3.23892 3.11214,-5.9183 6,-10c2.08247,-2.94335 4.34619,-4.70546 6,-7c1.30745,-1.814 3,-4 4,-4l1,-1l1,0l0,0" id="svg_33" stroke="#ffffff" fill="none"/>
-      <path stroke-width="5" d="m210,98c0,0 -1,0 -1,0c-1,0 -2,0 -4,0c-2,0 -3,0 -5,0c-1,0 -3.186,-0.30745 -5,1c-2.29454,1.65381 -5,3 -7,5c-1,1 -2,2 -3,4c-1,2 -1.84723,4.04132 -3,8c-0.88414,3.03616 -1,6 -1,8c0,2 -0.70711,4.29289 0,5c0.70711,0.70711 2,1 3,1c2,0 3.0535,0.4595 5,0c2.17625,-0.51374 5,-3 7,-5c3,-3 6.19028,-5.88152 8,-9c2.24469,-3.868 4.19028,-6.88152 6,-10c1.12234,-1.934 1.23463,-3.15224 2,-5c0.5412,-1.30656 0.29289,-2.29289 1,-3c0.70711,-0.70711 1,-1 1,0c0,1 -1,4 -2,8c-1,4 -1.49345,7.87856 -2,11c-0.64073,3.94835 0,6 0,8c0,2 0,3 1,4c1,1 1,1 2,2l0,0l0,0" id="svg_34" stroke="#ffffff" fill="none"/>
-      <path stroke-width="5" d="m253,95c0,0 0,0 -1,0c-2,0 -3,0 -5,0c-1,0 -2.02675,-0.22975 -3,0c-2.17625,0.51374 -2.87766,2.066 -4,4c-1.80972,3.11848 -2.84723,6.04132 -4,10c-0.88414,3.03616 -2,6 -2,8c0,3 0.33749,6.31001 2,9c2.23048,3.60901 4.82375,5.48626 7,6c1.9465,0.4595 5.02582,0.32037 7,0c3.12144,-0.50654 5,-3 6,-4c2,-2 3,-3 4,-4l0,-1" id="svg_35" stroke="#ffffff" fill="none"/>
-      <path stroke-width="5" d="m285,111c0,0 0,0 0,0c1,0 3,0 5,0c3,0 5,0 7,0c2,0 4,-1 5,-2c1,-1 2.49347,-2.87856 3,-6c0.32037,-1.97417 1,-4 1,-6c0,-2 0.58115,-3.41886 -1,-5c-1.58115,-1.58114 -4,-2 -6,-2c-2,0 -4.0535,-0.4595 -6,0c-2.17625,0.51374 -4.32144,3.80901 -6,7c-2.50705,4.76599 -3.49756,8.9258 -4,14c-0.39415,3.98053 -0.15277,8.04132 1,12c0.88414,3.03616 4,5 7,6c3,1 5.90779,1.49622 10,2c3.97003,0.48873 7,-1 10,-1l2,-1l1,-1l0,0" id="svg_36" stroke="#ffffff" fill="none"/>
-      <path stroke-width="5" d="m63,161c0,0 1,0 11,0c12,0 29,0 51,0c26,0 56,0 86,0c30,0 59,0 88,0c28,0 50.96777,-1.45505 76,-3c22.978,-1.41817 45.00751,-0.83376 69,-2c18.00647,-0.87527 35.00757,-0.88521 51,-2c13.00684,-0.90668 24,-1 34,-1c9,0 16,0 20,0l3,0l1,0" id="svg_46" stroke="#ffffff" fill="none"/>
-    </g>
-  </svg>
-</div>
+      <h1 class="typewriter" id="typewriter">Hello! I'm</h1>
 
-    <p class="hero-subtitle">
-      I'm a Mechanical Engineering student @ the University of Michigan<br>
-      with a passion for robotics &amp; hands-on design.<br>
-      I'm driven by curiosity: building things, taking them apart,<br>
-      and discovering how the world works.
-    </p>
+      <div class="hero-name" id="signature">
+        <svg width="650" height="310" viewBox="40 30 650 310" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path stroke-width="5" d="m381,56c0,1 0,2 0,5c0,4 0,8 0,13c0,6 0,12 0,18c0,6 -0.59122,13.0292 0,19c0.50244,5.0742 1.75531,10.132 4,14c1.80972,3.11848 3.85272,5.1731 5,6c1.814,1.30745 4.07611,1.38268 5,1c2.61313,-1.08239 3.19028,-3.88152 5,-7c2.24469,-3.868 3.49347,-6.87856 4,-10c0.32037,-1.97417 1,-4 1,-6c0,-2 0,-4 0,-6c0,-1 0,-2 0,-3c0,0 -0.68927,2.08025 0,5c1.0275,4.3525 4.11215,7.9183 7,12c2.08246,2.94335 5,5 8,6c3,1 7.21167,1.28588 10,-1c3.28101,-2.68979 5.47546,-7.86194 7,-14c1.46625,-5.9034 2.49622,-12.01761 2,-19c-0.50125,-7.05328 -2.35724,-15.25406 -5,-21c-2.43649,-5.2975 -4.75531,-10.132 -7,-14c-1.80972,-3.11848 -3,-4 -3,-5l-1,0" id="svg_15" stroke="#ffffff" fill="none"/>
+            <path stroke-width="5" d="m471,85c0,0 -1,0 -1,0c-1,0 -1.07611,-0.38268 -2,0c-1.30655,0.5412 -2.32144,3.80901 -4,7c-2.50705,4.76599 -4.44839,9.80565 -6,14c-1.43048,3.867 -2.49347,7.87856 -3,11c-0.32037,1.97417 -0.32037,4.02583 0,6c0.50653,3.12144 1.69254,5.186 3,7c0.8269,1.14727 2.69345,2.4588 4,3c1.84775,0.76537 2.85272,0.8269 4,0c1.814,-1.30745 5.44839,-3.80565 7,-8c1.43048,-3.867 3.84723,-9.04132 5,-13c0.88412,-3.03616 2,-6 2,-10c0,-2 0,-5 0,-8c0,-3 0,-5 -1,-7c-1,-2 -1,-3 -2,-3c0,0 0,0 -1,0l-1,-1l0,0l0,0" id="svg_27" stroke="#ffffff" fill="none"/>
+            <path stroke-width="5" d="m507,96c-1,0 -1,0 -1,1c0,1 0,3 0,4c0,2 0,3 0,5c0,3 0,6 0,9c0,3 0.48627,5.82375 1,8c0.22974,0.97325 0.29291,2.29289 1,3c0.70709,0.70711 2,0 3,0c1,0 3,-1 5,-3c2,-2 3.87769,-5.066 5,-7c1.80969,-3.11848 4.44843,-6.80565 6,-11c1.43048,-3.867 2.14429,-6.93414 3,-9c1.21014,-2.92156 1,-4 1,-5c0,-1 0,-1 0,1c0,4 -1.50732,9.02433 -2,14c-0.50244,5.0742 -1,10 -1,14c0,3 0,5 0,7l0,1l0,0" id="svg_28" stroke="#ffffff" fill="none"/>
+            <polyline stroke-linecap="round" id="svg_29" points="834,144 834,144 " stroke="#000" fill="none"/>
+            <path stroke-width="5" d="m107,64c0,0 0.38268,-0.07612 0,-1c-0.5412,-1.30656 -1.85273,-2.1731 -3,-3c-1.814,-1.30745 -3.186,-1.69255 -5,-3c-1.14727,-0.8269 -1.82375,-1.48626 -4,-2c-1.9465,-0.45951 -3,0 -5,0c-2,0 -4.186,0.69255 -6,2c-1.14727,0.8269 -3,3 -5,5c-2,2 -2.87766,5.066 -4,7c-1.80972,3.11848 -3.44841,6.80565 -5,11c-1.4305,3.867 -2.54863,6.76993 -4,11c-1.65482,4.82303 -1.49755,9.9258 -2,15c-0.39415,3.98053 -0.48055,9.03873 0,12c0.50654,3.12144 1.61065,7.15928 3,10c1.5841,3.23892 4,6 6,8c2,2 3.87856,2.49346 7,3c1.97417,0.32037 5.08025,0.68926 8,0c2.17625,-0.51374 5.37202,-2.38509 9,-5c3.44181,-2.48071 5.45049,-6.45049 8,-9c2.54951,-2.54951 4,-5 5,-7c1,-2 2,-4 2,-6c0,-2 0,-4 -1,-5c-1,-1 -1.85273,-2.1731 -3,-3c-1.814,-1.30745 -4.15224,-1.23463 -6,-2c-1.30656,-0.5412 -2.15224,-0.23463 -4,-1c-1.30656,-0.5412 -2,-1 -2,-1c0,0 1,0 3,0c2,0 3,0 5,-1c2,-1 4.07612,-1.61732 5,-2c1.30656,-0.5412 2.186,-1.69255 4,-3c1.14727,-0.8269 3,-2 4,-3l1,0l0,-1l1,0" id="svg_32" stroke="#ffffff" fill="none"/>
+            <path stroke-width="5" d="m144,96c0,0 0,0 0,1c0,1 0,2 0,4c0,3 0.36655,6.02248 0,9c-0.50378,4.09222 -1,6 -1,9c0,3 -0.48626,5.82375 -1,8c-0.68926,2.91975 0,4 0,5c0,0 0,1 0,1c0,0 0,0 0,1c0,0 0,0 0,0c0,-1 0.48626,-2.82375 1,-5c0.68926,-2.91975 0.61065,-6.15928 2,-9c1.58411,-3.23892 3.11214,-5.9183 6,-10c2.08247,-2.94335 4.34619,-4.70546 6,-7c1.30745,-1.814 3,-4 4,-4l1,-1l1,0l0,0" id="svg_33" stroke="#ffffff" fill="none"/>
+            <path stroke-width="5" d="m210,98c0,0 -1,0 -1,0c-1,0 -2,0 -4,0c-2,0 -3,0 -5,0c-1,0 -3.186,-0.30745 -5,1c-2.29454,1.65381 -5,3 -7,5c-1,1 -2,2 -3,4c-1,2 -1.84723,4.04132 -3,8c-0.88414,3.03616 -1,6 -1,8c0,2 -0.70711,4.29289 0,5c0.70711,0.70711 2,1 3,1c2,0 3.0535,0.4595 5,0c2.17625,-0.51374 5,-3 7,-5c3,-3 6.19028,-5.88152 8,-9c2.24469,-3.868 4.19028,-6.88152 6,-10c1.12234,-1.934 1.23463,-3.15224 2,-5c0.5412,-1.30656 0.29289,-2.29289 1,-3c0.70711,-0.70711 1,-1 1,0c0,1 -1,4 -2,8c-1,4 -1.49345,7.87856 -2,11c-0.64073,3.94835 0,6 0,8c0,2 0,3 1,4c1,1 1,1 2,2l0,0l0,0" id="svg_34" stroke="#ffffff" fill="none"/>
+            <path stroke-width="5" d="m253,95c0,0 0,0 -1,0c-2,0 -3,0 -5,0c-1,0 -2.02675,-0.22975 -3,0c-2.17625,0.51374 -2.87766,2.066 -4,4c-1.80972,3.11848 -2.84723,6.04132 -4,10c-0.88414,3.03616 -2,6 -2,8c0,3 0.33749,6.31001 2,9c2.23048,3.60901 4.82375,5.48626 7,6c1.9465,0.4595 5.02582,0.32037 7,0c3.12144,-0.50654 5,-3 6,-4c2,-2 3,-3 4,-4l0,-1" id="svg_35" stroke="#ffffff" fill="none"/>
+            <path stroke-width="5" d="m285,111c0,0 0,0 0,0c1,0 3,0 5,0c3,0 5,0 7,0c2,0 4,-1 5,-2c1,-1 2.49347,-2.87856 3,-6c0.32037,-1.97417 1,-4 1,-6c0,-2 0.58115,-3.41886 -1,-5c-1.58115,-1.58114 -4,-2 -6,-2c-2,0 -4.0535,-0.4595 -6,0c-2.17625,0.51374 -4.32144,3.80901 -6,7c-2.50705,4.76599 -3.49756,8.9258 -4,14c-0.39415,3.98053 -0.15277,8.04132 1,12c0.88414,3.03616 4,5 7,6c3,1 5.90779,1.49622 10,2c3.97003,0.48873 7,-1 10,-1l2,-1l1,-1l0,0" id="svg_36" stroke="#ffffff" fill="none"/>
+            <path stroke-width="5" d="m63,161c0,0 1,0 11,0c12,0 29,0 51,0c26,0 56,0 86,0c30,0 59,0 88,0c28,0 50.96777,-1.45505 76,-3c22.978,-1.41817 45.00751,-0.83376 69,-2c18.00647,-0.87527 35.00757,-0.88521 51,-2c13.00684,-0.90668 24,-1 34,-1c9,0 16,0 20,0l3,0l1,0" id="svg_46" stroke="#ffffff" fill="none"/>
+          </g>
+        </svg>
+      </div>
 
-    <nav class="hero-nav">
-      <a href="index.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="files/Grace_Wou_Resume.pdf" target="_blank">Resume</a>
-      <a href="notes.html">Notes</a>
-    </nav>
+      <p class="hero-subtitle">
+        I'm a Mechanical Engineering student @ the University of Michigan<br>
+        with a passion for robotics &amp; hands-on design.<br>
+        I'm driven by curiosity: building things, taking them apart,<br>
+        and discovering how the world works.
+      </p>
 
-   </div>
-   <img src="images/headshot.jpg" alt="Grace Wou" class="hero-photo">
+      <nav class="hero-nav">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="files/Grace_Wou_Resume.pdf" target="_blank">Resume</a>
+        <a href="notes.html">Notes</a>
+      </nav>
+
+    </div>
+
+    <img src="images/headshot.jpg" alt="Grace Wou" class="hero-photo">
 
   </section>
 
@@ -74,38 +77,38 @@
 
 <script>
   // Draw the handwritten signature, left to right, after the typewriter finishes
- window.addEventListener('load', () => {
-  // Return visit: leave everything fully drawn, no animation
-  if (sessionStorage.getItem('introPlayed')) return;
+  window.addEventListener('load', () => {
+    // Return visit: leave everything fully drawn, no animation
+    if (sessionStorage.getItem('introPlayed')) return;
 
-  const svgEl = document.querySelector('#signature svg');
-  const allPaths = Array.from(svgEl.querySelectorAll('path'));
-  const underline = svgEl.querySelector('#svg_46');
-  const letterPaths = allPaths.filter(p => p.id !== 'svg_46');
+    const svgEl = document.querySelector('#signature svg');
+    const allPaths = Array.from(svgEl.querySelectorAll('path'));
+    const underline = svgEl.querySelector('#svg_46');
+    const letterPaths = allPaths.filter(p => p.id !== 'svg_46');
 
-  letterPaths.sort((a, b) => a.getBBox().x - b.getBBox().x);
+    letterPaths.sort((a, b) => a.getBBox().x - b.getBBox().x);
 
-  let delay = 1.5;
-  letterPaths.forEach(path => {
-    const length = path.getTotalLength();
-    path.style.strokeDasharray = length;
-    path.style.strokeDashoffset = length;
-    path.style.animation = `draw 0.5s ease forwards`;
-    path.style.animationDelay = `${delay}s`;
-    delay += 0.25;
+    let delay = 1.5;
+    letterPaths.forEach(path => {
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+      path.style.animation = `draw 0.5s ease forwards`;
+      path.style.animationDelay = `${delay}s`;
+      delay += 0.25;
+    });
+
+    if (underline) {
+      const length = underline.getTotalLength();
+      underline.style.strokeDasharray = length;
+      underline.style.strokeDashoffset = length;
+      underline.style.animation = `draw 0.8s ease forwards`;
+      underline.style.animationDelay = `${delay + 0.2}s`;
+    }
+
+    // Mark the intro as played
+    sessionStorage.setItem('introPlayed', 'true');
   });
-
-  if (underline) {
-    const length = underline.getTotalLength();
-    underline.style.strokeDasharray = length;
-    underline.style.strokeDashoffset = length;
-    underline.style.animation = `draw 0.8s ease forwards`;
-    underline.style.animationDelay = `${delay + 0.2}s`;
-  }
-
-  // Mark the intro as played
-  sessionStorage.setItem('introPlayed', 'true');
-});
 
   // Page transitions (nav excluded from fade)
   document.querySelectorAll('nav a, .project-row').forEach(link => {
@@ -119,7 +122,7 @@
 
       e.preventDefault();
       fadeEl.classList.add('fade-out');
-      setTimeout(() => { window.location.href = href; }, 600);
+      setTimeout(() => { window.location.href = href; }, 150);
     });
   });
 </script>
