@@ -22,7 +22,7 @@ a:hover {
 }
 
 body {
-  animation: fadeIn 0.2s ease-in-out;
+  animation: fadeIn 0.15s ease-in-out;
 }
 
 @keyframes fadeIn {
