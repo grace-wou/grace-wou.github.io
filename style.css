@@ -85,8 +85,8 @@ a:hover {
   margin: 0 0 8px 0;
   animation:
     typing 1.5s steps(10) forwards,
-    blink 0.75s step-end 1.75,
-    hide-cursor 0.1s linear 1.5s forwards;
+    blink 0.75s step-end 2,
+    hide-cursor 0.1s linear 1.25s forwards;
 }
 
 .typewriter {
