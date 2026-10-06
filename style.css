@@ -283,3 +283,7 @@ footer {
     padding-right: 24px;
   }
 }
+
+@view-transition {
+  navigation: auto;
+}
