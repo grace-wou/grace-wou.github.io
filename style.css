@@ -45,7 +45,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  min-height: 100vh;
+  min-height: 80vh;
    padding: 20px 80px;
   box-sizing: border-box;
 }
@@ -131,7 +131,7 @@ a:hover {
   color: var(--text-dim);
   font-size: 1.1rem;
   line-height: 1.6;
-  margin: 0 0 24px;  /* removed the top margin that was pushing it down */
+  margin: -60 0 24px;  /* removed the top margin that was pushing it down */
 }
 
 /* Inline nav links, matching the reference style */
