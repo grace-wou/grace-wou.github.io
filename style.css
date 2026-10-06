@@ -15,6 +15,7 @@ body, html {
 
 a {
   color: var(--text);
+  text-decoration: none;   /* removes underline from all links */
 }
 
 a:hover {
@@ -123,7 +124,6 @@ body.fade-out {
 }
 
 .hero-nav a {
-  text-decoration: none;
   font-size: 1.05rem;
 }
 
@@ -152,7 +152,6 @@ body.fade-out {
 
 .hero-project-card {
   text-align: center;
-  text-decoration: none;
 }
 
 .hero-project-card img {
@@ -172,7 +171,6 @@ body.fade-out {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  text-decoration: none;
   margin-bottom: 40px;
 }
 
@@ -192,7 +190,7 @@ body.fade-out {
   border-bottom: 2px solid var(--text);
 }
 
-/* Optional: use this if you swap the text for your handwritten name image */
+/* Use this if you swap the text for your handwritten name image */
 .back-name-img {
   height: 48px;
   width: auto;
@@ -217,7 +215,6 @@ body.fade-out {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  text-decoration: none;
   color: inherit;
   padding: 24px 0;
 }
