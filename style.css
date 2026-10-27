@@ -337,3 +337,71 @@ footer {
 .challenge-tasks li::before {
   content: "– ";   /* matches the dash style in your inspo */
 }
+
+/* ---------- Key skills ---------- */
+
+.key-skills {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 80px;
+}
+
+.key-skills h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  margin: 0 0 12px;
+}
+
+.key-skills p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ---------- Picture sections ---------- */
+
+.project-section {
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+.project-section h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.project-section > p {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.image-grid figure {
+  margin: 0;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.image-grid figcaption {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  margin-top: 8px;
+  text-align: center;
+}
