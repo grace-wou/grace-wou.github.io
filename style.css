@@ -297,3 +297,43 @@ footer {
   width: 14ch;
   border-right-color: transparent;
 }
+
+/* ---------- Design challenge section ---------- */
+
+.design-challenge {
+  text-align: center;
+  max-width: 720px;
+  margin: 80px auto;
+}
+
+.design-challenge h2 {
+  font-size: clamp(2.8rem, 8vw, 5rem);  /* big, scales down on phones */
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 32px;
+}
+
+.design-challenge p {
+  color: var(--text-dim);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+.challenge-tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.challenge-tasks li {
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.challenge-tasks li::before {
+  content: "– ";   /* matches the dash style in your inspo */
+}
