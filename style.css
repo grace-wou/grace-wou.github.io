@@ -412,6 +412,11 @@ footer {
   text-align: center;
 }
 
+.image-grid .image-small {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 /* ---------- Personal contributions ---------- */
 
 .contributions {
