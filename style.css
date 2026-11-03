@@ -457,3 +457,19 @@ footer {
   margin-top: 8px;
   text-align: center;
 }
+
+.image-grid-feature {
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+}
+
+.image-grid-feature figure:last-child img {
+  max-height: 350px;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .image-grid-feature {
+    grid-template-columns: 1fr;
+  }
+}
