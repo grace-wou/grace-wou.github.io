@@ -168,7 +168,7 @@ body.fade-out {
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 45% 35%;   /* x% y% */
+  object-position: center;     /* was 45% 35%; a square image needs no offset */
   border: 1px solid rgba(255, 255, 255, 0.25);
   flex-shrink: 0;
 }
