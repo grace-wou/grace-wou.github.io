@@ -473,3 +473,21 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.image-grid-stacked {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.image-grid-stacked .stacked-main {
+  grid-row: span 2;     /* model sits on the left, spanning both rows */
+}
+
+@media (max-width: 800px) {
+  .image-grid-stacked {
+    grid-template-columns: 1fr;
+  }
+  .image-grid-stacked .stacked-main {
+    grid-row: auto;
+  }
+}
