@@ -491,3 +491,25 @@ footer {
     grid-row: auto;
   }
 }
+
+/* ---------- Hero image (top of project page) ---------- */
+
+.project-hero {
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.project-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-hero figcaption {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  margin-top: 8px;
+  text-align: center;
+}
